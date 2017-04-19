@@ -1,0 +1,61 @@
+<section layout="column" flex layout-align="center center" class="pseudo">
+        <md-card class="md-whiteframe-4dp" style="width: 400px;">
+            <md-toolbar style="background-color: #2196f3;">
+                <div layout="column" layout-padding layout-align="center center">
+                  <img src="css/logo_blue.svg" style="width:180px; margin-left: 10px; margin-buttom: 20px;">
+
+                </div>
+            </md-toolbar>
+            <md-card-content>
+                <form ng-if="loginTrue">
+                    <md-input-container class="md-block">
+                        <label for="pseudo">Login</label>
+                        <input  ng-model="pseudo" required />
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label for="password">Password</label>
+                        <input  ng-model="password" required />
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <div layout="row" layout-align="center center">
+                            <md-button class="md-raised md-accent" ng-click='login(pseudo,password)' style="background-color: #2196f3;">Login</md-button>
+                            <md-button class="md-raised md-accent" ng-click='register()' style="background-color: #2196f3;">register</md-button>
+
+                        </div>
+                    </md-input-container>
+                </form>
+                <form ng-if="registerTrue">
+                    <md-input-container class="md-block">
+                        <label for="pseudo">Login</label>
+                        <input  ng-model="pseudo" required />
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label for="password">Password</label>
+                        <input  ng-model="password" required />
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label for="email">Email</label>
+                        <input  ng-model="email" required />
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label for="nom">Nom</label>
+                        <input  ng-model="nom" required />
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label for="prenom">Prenom</label>
+                        <input  ng-model="prenom" required />
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label for="phone">Phone</label>
+                        <input  ng-model="phone" required />
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <div layout="row" layout-align="center center">
+                            <md-button class="md-raised md-accent" ng-click='registerUser(pseudo,password,email,nom,prenom,phones)' style="background-color: #2196f3;">Register</md-button>
+                            <md-button class="md-raised md-accent" ng-click='registerNo()' style="background-color: #2196f3;">Login</md-button>
+                        </div>
+                    </md-input-container>
+                </form>
+            </md-card-content>
+        </md-card>
+    </section>
